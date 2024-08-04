@@ -23,7 +23,7 @@ const Header = () => {
                         />
                     </Link>
                     {/*nav trigger btn*/}
-                    <button onClick={() => setNavActive(!navActive)} className='w-8 h-6 text-accent relative flex items-center justify-center z-[60] outline-none'>
+                    <button onClick={() => setNavActive(!navActive)} className='w-8 h-6 text-accent relative flex items-center justify-center z-[60] outline-none mr-6'>
                         {/*1*/}
                         <span className={`w-full h-[1.5px] bg-current absolute left-0 will-change-transform transition-transform duration-300 ${navActive ? "top-1/2 rotate-45" : "top-0 translate-y-0"}`}>
                         </span>

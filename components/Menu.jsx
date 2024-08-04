@@ -1,6 +1,7 @@
 import React from 'react'
 import Separator from './Separator';
 import MenuItems from './MenuItems';
+import Link from 'next/link';
 
 const menuItems = [
     {
@@ -92,9 +93,9 @@ const Menu = () => {
                         />;
                     })}
                 </div>
-
+                    <Link href="/menu">
                 <button className='btn'>View full menu</button>
-
+                </Link>
             </div>
         </div>
     </section>;
