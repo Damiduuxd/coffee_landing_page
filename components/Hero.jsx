@@ -2,6 +2,7 @@
 import React from 'react'
 import Separator from './Separator'
 import Badge from './Badge'
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -34,7 +35,8 @@ const Hero = () => {
           <p className='lead font-light max-w-[300px] md:max-w-[430px] xl:max-w-[560px] mb-4'>
             Experience the joy of exceptional coffee in our cozy space, where every cup is crafted with passion and warmth
           </p>
-          <button className='btn'>our menu</button>
+          <Link href="/menu">
+          <button className='btn'> our menu</button></Link>
         </div>
       </div>
     </section>
