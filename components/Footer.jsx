@@ -20,7 +20,7 @@ const Footer = () => {
           <div>
             <p>
               <span className="text-xs uppercase tracking-wide text-gray-100"> Call us </span>
-              <a href="#" className="block text-2xl font-medium text-gray-200 hover:text-accent sm:text-3xl">
+              <a href="+94123456789" className="block text-2xl font-medium text-gray-200 hover:text-accent sm:text-3xl">
                 0123456789
               </a>
             </p>
@@ -72,16 +72,16 @@ const Footer = () => {
           <div>
             <ul className="space-y-4 text-sm text-gray-100">
               <li>
-                <a href="#" className="text-gray-100 hover:text-accent">Home</a>
+                <a href="/" className="text-gray-100 hover:text-accent">Home</a>
               </li>
               <li>
-                <a href="#" className="text-gray-100 hover:text-accent">Contact Us</a>
+                <a href="/contactus" className="text-gray-100 hover:text-accent">Contact Us</a>
               </li>
               <li>
-                <a href="#" className="text-gray-100 hover:text-accent">About Us</a>
+                <a href="/aboutus" className="text-gray-100 hover:text-accent">About Us</a>
               </li>
               <li>
-                <a href="#" className="text-gray-100 hover:text-accent">Cafe Reviews</a>
+                <a href="/testimonials" className="text-gray-100 hover:text-accent">Cafe Reviews</a>
               </li>
             </ul>
           </div>
