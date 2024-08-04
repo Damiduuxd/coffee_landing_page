@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply font-secondary text-secondary leading-relaxed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary font-primary;
+  }
+  .h1 {
+    @apply text-[70px] xl:text-[150px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[56px] xl:text-[88px] leading-[1.2] font-bold;
+  }
+  .lead {
+    @apply text-lg;
+  }
+  .btn {
+    @apply min-w-[156px] h-[54px] px-6 bg-accent hover:bg-accent-hover text-primary
+    text-[13px] uppercase font-semibold tracking-[.15em] transition-all;
+  } 
+  section {
+    margin: 0;
+    padding: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-primary !text-[2rem];
 }
