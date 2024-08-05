@@ -1,23 +1,24 @@
 "use client";
 import React, { useState } from 'react';
 
+
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortOption, setSortOption] = useState('bestSelling');
 
   const coffeeItems = [
-    { name: "Espresso", category: "Espresso", price: 400, imgSrc: "https://example.com/espresso.jpg" },
-    { name: "Latte", category: "Espresso", price: 650, imgSrc: "https://example.com/latte.jpg" },
-    { name: "Mocha", category: "Espresso", price: 750, imgSrc: "https://example.com/mocha.jpg" },
-    { name: "Coffee Frappe", category: "Frappuccino", price: 800, imgSrc: "https://example.com/coffee-frappe.jpg" },
-    { name: "Mocha Frappe", category: "Frappuccino", price: 850, imgSrc: "https://example.com/mocha-frappe.jpg" },
-    { name: "Caramel Frappe", category: "Frappuccino", price: 900, imgSrc: "https://example.com/caramel-frappe.jpg" },
-    { name: "Ice Spiced Coffee", category: "Cold Espresso", price: 900, imgSrc: "https://example.com/ice-spiced-coffee.jpg" },
-    { name: "Iced Rose Latte", category: "Cold Espresso", price: 850, imgSrc: "https://example.com/iced-rose-latte.jpg" },
-    { name: "Coffee Daalgona", category: "Cold Espresso", price: 700, imgSrc: "https://example.com/coffee-daalgona.jpg" },
-    { name: "Hot Chocolate", category: "Fancy Milk Base", price: 750, imgSrc: "https://example.com/hot-chocolate.jpg" },
-    { name: "Milo", category: "Fancy Milk Base", price: 500, imgSrc: "https://example.com/milo.jpg" },
-    { name: "Milo Godzilla", category: "Fancy Milk Base", price: 850, imgSrc: "https://example.com/milo-godzilla.jpg" },
+    { name: "Espresso", category: "Espresso", price: 400, imgSrc: "/cafe.jpg" },
+    { name: "Latte", category: "Espresso", price: 650, imgSrc: "/cafe.jpg" },
+    { name: "Mocha", category: "Espresso", price: 750, imgSrc: "/cafe.jpg" },
+    { name: "Coffee Frappe", category: "Frappuccino", price: 800, imgSrc: "/cafe.jpg" },
+    { name: "Mocha Frappe", category: "Frappuccino", price: 850, imgSrc: "/cafe.jpg" },
+    { name: "Caramel Frappe", category: "Frappuccino", price: 900, imgSrc: "/cafe.jpg" },
+    { name: "Ice Spiced Coffee", category: "Cold Espresso", price: 900, imgSrc: "/cafe.jpg" },
+    { name: "Iced Rose Latte", category: "Cold Espresso", price: 850, imgSrc: "/cafe.jpg"},
+    { name: "Coffee Daalgona", category: "Cold Espresso", price: 700, imgSrc: "/cafe.jpg" },
+    { name: "Hot Chocolate", category: "Fancy Milk Base", price: 750, imgSrc: "/cafe.jpg" },
+    { name: "Milo", category: "Fancy Milk Base", price: 500, imgSrc:"/cafe.jpg"},
+    { name: "Milo Godzilla", category: "Fancy Milk Base", price: 850, imgSrc:"/cafe.jpg" },
   ];
 
   const handleCategoryChange = (event) => {
@@ -133,7 +134,7 @@ const Menu = () => {
 
           <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {sortedItems.map((item) => (
-              <li key={item.name}>
+              <li className='' key={item.name}>
                 <a href="#" className="group block overflow-hidden">
                   <img
                     src={item.imgSrc}
@@ -141,7 +142,7 @@ const Menu = () => {
                     className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="relative bg-accent pt-3">
-                    <h3 className="text-xs text-white group-hover:underline group-hover:underline-offset-4">
+                    <h3 className="text-xl text-white group-hover:underline group-hover:underline-offset-4">
                       {item.name}
                     </h3>
                     <p className="mt-2">
