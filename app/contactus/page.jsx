@@ -2,8 +2,9 @@
 import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import Badge from '@/components/Badge';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import emailjs from '@emailjs/browser';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Page() {
   const form = useRef();
@@ -55,8 +56,33 @@ function Page() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!firstName) {
+      toast.error('First name is empty');
+      return;
+    }
+
+    if (!lastName) {
+      toast.error('Last name is empty');
+      return;
+    }
+
+    if (!email) {
+      toast.error('Email is empty');
+      return;
+    }
+
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      toast.error('Invalid email address');
+      return;
+    }
+
     if (!phone) {
       toast.error('Phone number is empty');
+      return;
+    }
+
+    if (!message) {
+      toast.error('Message is empty');
       return;
     }
 
@@ -91,21 +117,14 @@ function Page() {
             </div>
           </aside>
 
-          <main
-            className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
-          >
-            <div className="max-w-xl lg:max-w-3xl relative">
-              <div className="absolute top-0 left-0 mt-6 ml-6 z-20">
-                <Badge className="h-8 sm:h-10" />
-              </div>
-
-              <h1 className="mt-12 text-2xl font-bold sm:text-3xl md:text-4xl relative z-10">
+          <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+            <div className="max-w-xl lg:max-w-3xl w-full relative mx-auto lg:mx-0">
+              <h1 className="mt-12 text-2xl font-bold sm:text-3xl md:text-4xl relative z-10 text-center lg:text-left">
                 Welcome to Zonbrew ☕️
               </h1>
 
-              <p className="mt-4 leading-relaxed relative z-10">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam,
-                quibusdam aperiam voluptatum.
+              <p className="mt-4 leading-relaxed relative z-10 text-center lg:text-left">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
               </p>
 
               <form ref={form} onSubmit={handleSubmit} className="mt-8 grid grid-cols-6 gap-6 relative z-10">
@@ -117,9 +136,10 @@ function Page() {
                     type="text"
                     id="FirstName"
                     name="firstName"
+                    placeholder='Damidu'
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm"
+                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm h-9"
                   />
                 </div>
 
@@ -131,9 +151,10 @@ function Page() {
                     type="text"
                     id="LastName"
                     name="lastName"
+                    placeholder='Abeysinghe'
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm"
+                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm h-9"
                   />
                 </div>
 
@@ -145,9 +166,10 @@ function Page() {
                     type="email"
                     id="Email"
                     name="email"
+                    placeholder='damidu362@gmail.com'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm"
+                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm h-9"
                   />
                 </div>
 
@@ -159,9 +181,10 @@ function Page() {
                     type="text"
                     id="Phone"
                     name="phone"
+                    placeholder='0771234567'
                     value={phone}
                     onChange={handlePhoneChange}
-                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm"
+                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm h-9"
                   />
                 </div>
 
@@ -173,6 +196,7 @@ function Page() {
                     id="Message"
                     name="message"
                     rows="4"
+                    placeholder='type your message here'
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-black shadow-sm"
@@ -192,6 +216,7 @@ function Page() {
           </main>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 }

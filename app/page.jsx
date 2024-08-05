@@ -6,7 +6,6 @@ import Explore from '@/components/Explore';
 import Menu from '@/components/Menu';
 import Testimonials from '@/components/Testimonials';
 import OpeningHours from '@/components/OpeningHours';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function Page({ Component, pageProps }) {
@@ -30,7 +29,6 @@ function Page({ Component, pageProps }) {
       <Menu />
       <OpeningHours />
       <Testimonials />
-      <ToastContainer />
     </div>
   );
 }
