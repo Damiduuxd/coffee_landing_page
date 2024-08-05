@@ -81,5 +81,9 @@ Video Link: https://pixabay.com/videos/coffee-cup-mug-drink-133988/
 
 
 
-
+<img
+                        alt={item.title}
+                        src={item.imgSrc}
+                        className="h-56 w-full object-cover mt-8"
+                    />
 

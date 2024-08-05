@@ -5,6 +5,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Badge from './Badge';
 import Separator from './Separator';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,20 +31,22 @@ const Aboutus = () => {
     const sectionsRef = useRef([]);
 
     useLayoutEffect(() => {
-        sectionsRef.current.forEach((section, index) => {
-            gsap.fromTo(section, 
-                { opacity: 0, y: 50 },
-                { 
-                    opacity: 1, 
-                    y: 0,
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top center",
-                        end: "bottom center",
-                        scrub: true,
-                    },
-                }
-            );
+        sectionsRef.current.forEach((section) => {
+            if (section) {
+                gsap.fromTo(section, 
+                    { opacity: 0, y: 50 },
+                    { 
+                        opacity: 1, 
+                        y: 0,
+                        scrollTrigger: {
+                            trigger: section,
+                            start: "top center",
+                            end: "bottom center",
+                            scrub: true,
+                        },
+                    }
+                );
+            }
         });
     }, []);
 
@@ -78,7 +81,9 @@ const Aboutus = () => {
                                             {item.description}
                                         </p>
                                         {/* Button */}
-                                        <button className='btn'>See more</button>
+                                        <Link href="/aboutus" passHref>
+                                            <button className='btn'>See more</button>
+                                        </Link>
                                     </div>
                                 </div>
                                 {/* Image */}

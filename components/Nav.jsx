@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const link = [
   { href: "/", name: "home" },
-  { href: "/explore", name: "Explore" },
+  //{ href: "/explore", name: "Explore" },
   { href: "/aboutus", name: "About us" },
   { href: "/menu", name: "Menu" },
   { href: "/contactus", name: "Contact us" }
