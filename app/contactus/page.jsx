@@ -86,6 +86,9 @@ function Page() {
               height={600}
               className="w-full h-full object-cover relative z-0"
             />
+            <div className="absolute inset-0 flex justify-center items-center z-20">
+              <Badge containerStyles="w-[320px] h-[320px]" />
+            </div>
           </aside>
 
           <main
