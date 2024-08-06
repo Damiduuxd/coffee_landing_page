@@ -37,10 +37,10 @@ const Testimonials = () => {
               <div className='flex justify-center h-full xl:pt-14'>
                 <div className='max-w-[60%] text-primary'>
                   <IoMdQuote className='text-6xl text-primary mb-12 mx-auto'/>
-                  <p className='text-2xl font-secondary text-center mb-8'>{person.message}</p>
+                  <p className='text-2xl font-secondary text-center mb-8 cursor-default'>{person.message}</p>
                   <div className='text-center'>
-                    <p className='text-xl font-bold mb-1'>{person.name}</p>
-                    <p className='text-secondary'>{person.profession}</p>
+                    <p className='text-xl font-bold mb-1 cursor-default'>{person.name}</p>
+                    <p className='text-secondary cursor-default'>{person.profession}</p>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from 'react';
 
-
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortOption, setSortOption] = useState('bestSelling');
@@ -132,7 +131,7 @@ const Menu = () => {
             </div>
           </div>
 
-          <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {sortedItems.map((item) => (
               <li className='' key={item.name}>
                 <a href="#" className="group block overflow-hidden">

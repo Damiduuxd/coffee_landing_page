@@ -20,7 +20,7 @@ const data = [
 
 function Page() {
     return (
-        <div className="bg-white">
+        <div className="bg-black">
         <div className="container mx-auto mt-20 bg-gray-400">
             {data.map((item, index) => (
                 <React.Fragment key={index}>

@@ -24,7 +24,7 @@ const OpeningHours = () => {
         <div className='w-full h-full absolute top-0 bg-black/[0.85] z-10 '></div>
 {/* text & img*/}
 <div className='z-20 flex flex-col items-center justify-center'>
-    <h2 className='h2 text-white mb-4'>
+    <h2 className='h2 text-white mb-4 cursor-default'>
         Opening Hours
     </h2>
     <Separator bg='accent'/>
