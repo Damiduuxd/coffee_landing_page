@@ -1,10 +1,12 @@
 import React from 'react';
+import { MdOutlineStarPurple500 } from "react-icons/md";
+import { MdOutlineStarBorderPurple500 } from "react-icons/md";
 
 function Page() {
   return (
     <div className="bg-accent p-4 md:p-6 lg:p-8 xl:p-10">
-      <div className="bg-white p-4 rounded-lg shadow-md max-w-full mx-auto">
-        <div className="flex flex-col items-center">
+      <div className="bg-white p-4 rounded-lg shadow-md max-w-full mx-auto mt-10">
+        <div className="flex flex-col items-">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -17,17 +19,21 @@ function Page() {
               className="w-full max-w-[200px] text-left items-left justify-left flex"
             />
           </a>
-          <div className="text-left text-black">
-            <h2 className="text-xl font-bold mb-2 text-center">Zenbew coffee</h2>
+          <div className="text-left text-black cursor-default">
+            <h2 className="text-xl font-bold mb-2 text-center cursor-default">Zenbew coffee</h2>
              <p className="text-lg mb-2">TripAdvisor Traveler Rating</p>
-            <p className="text-lg font-bold mb-4">🟢🟢🟢◯◐  5 reviews</p>
+            <p className="text-lg font-bold mb-4 flex"> <MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /><MdOutlineStarPurple500 /> <MdOutlineStarBorderPurple500 />
+
+
+
+            5 reviews</p>
             <p className="text-lg mb-4">TripAdvisor Ranking</p>
             <p className="text-lg font-bold">#229 of 370 places to drink in Kandy</p>
             <div className="mt-4">
               <h3 className="text-lg font-semibold mb-2">Recent Traveler Reviews</h3>
               <ul className="list-disc pl-5">
                 <li className="mb-2">
-                  <p><strong>Food was amazing and great service by the staff</strong> We didn't wait much longer until food..."</p>
+                  <p><strong>Food was amazing and great service by the staff</strong> We didn't wait much longer until coffe..."</p>
                 </li>
                 <li className="mb-2">
                   <p><strong>"The coffee is delicious, their extensive menu offers a wide variety of choices</strong> Perfect convenient location…"</p>
