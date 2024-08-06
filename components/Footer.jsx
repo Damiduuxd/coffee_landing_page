@@ -18,14 +18,16 @@ const Footer = () => {
       <div className="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
-            <p>
-              <span className="text-xs uppercase tracking-wide text-gray-100"> Call us </span>
-              <a href="+94123456789"
-              target="_blank"
-              className="block text-2xl font-medium text-gray-200 hover:text-accent sm:text-3xl">
-                0123456789
-              </a>
-            </p>
+          <p>
+  <span className="text-xs uppercase tracking-wide text-gray-100">Call us</span>
+  <a 
+    href="tel:+94123456789"
+    className="block text-2xl font-medium text-gray-200 hover:text-accent sm:text-3xl"
+  >
+    0123456789
+  </a>
+</p>
+
 
             <ul className="mt-8 space-y-1 text-sm text-gray-200">
               <li>Monday to Saturday: 10am - 8pm</li>
