@@ -1,11 +1,12 @@
-```markdown
-# ☕ Coffee Landing Page ☕
+# ☕ Coffee Landing Page ☕ 
 
+<img src="public/bg.png" alt="Banner Image" />
+
+```markdown
 **How to Build a Coffee Landing Page**
 
 This project demonstrates how to create a responsive and visually appealing coffee-themed<br> landing page using React, Next.js, Tailwind CSS, Framer Motion, and GSAP.<br> We combine smooth animations with a sleek design to showcase coffee products dynamically <br>and professionally.
 
-/bg.png
 
 ## 🚀 Quick Start
 
