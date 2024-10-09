@@ -1,4 +1,4 @@
-# ☕ Coffee Landing Page ☕ 
+ ☕ Coffee Landing Page ☕ 
 
 <img src="public/bg.png" alt="Banner Image" />
 
@@ -28,7 +28,7 @@ Clone the repository using Git:
 git clone git@github.com:Damiduuxd/coffee_landing_page.git
 ```
 
-### Installation
+ Installation
 
 Navigate to the project directory and install the dependencies:
 
@@ -37,7 +37,7 @@ cd coffee_landing_page
 npm install
 ```
 
-### Set Up Environment Variables
+ Set Up Environment Variables
 
 Create a `.env` file in the root directory and add your environment variables:
 
@@ -50,8 +50,7 @@ NEXT_PUBLIC_PLACE_ID=YOUR_PLACE_ID
 ```
 
 Remember to replace the placeholder values with your actual keys from EmailJS and Google Maps Platform.
-
-### Running the Project
+ Running the Project
 
 Start the development server:
 
@@ -61,14 +60,11 @@ npm run dev
 
 This will launch the page on [http://localhost:3000](http://localhost:3000).
 
-## 🔗 Useful Links
+ 🔗 Useful Links
 
 - Models and Assets: [Google Drive Link](https://drive.google.com/file/d/1uiYBBLvtv-yfIL4AISiPLYYQpY-fkRAE/view)
 
-## Contributing
+ Contributing
 
 Contributions are welcome! Please feel free to open issues or submit pull requests.
 
-## License
-
-[Specify your license here (e.g., MIT License)]
